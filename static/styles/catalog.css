@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.background-image-catalog {
+  background-image: url("https://img.выкса.рф/uploads/posts/2019-04/1554883249_338a2168xh8.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.overlay-catalog {
+  background-color: rgba(0, 0, 0, 0.39);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.content-catalog {
+  position: relative;
+  z-index: 1;
+  /* Стиль для фона сайта */
+}
+.panel-catalog {
+  background-color: rgba(0, 0, 0, 0.788);
+  z-index: 2;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  /* Стиль для "Каталог" */
+  padding: 12px 24px;
+  height: 50px;
+  width: 170px;
+  background-color: transparent;
+  color: rgb(177, 204, 78);
+  border: none;
+  border-radius: 0.5px;
+  cursor: pointer;
+  transition: outline-color 0.3s ease-in-out;
+  transform: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  box-shadow: none;
+  transition-duration: 500ms;
+  transition-property: all;
+}
+button:hover {
+  box-shadow: 0 0 12px rgba(177, 204, 78, 0.5);
+  transform: scale(1.03);
+}
+button:active {
+  outline-color: rgb(111, 134, 83);
+  transform: translateY(2px);
+}
+
+.d-grid {
+  margin-left: 45px;
+  margin-top: 35px;
+  height: 200px;
+  width: 200px;
+}
+
+.card-title {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-text {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.panel-catalog {
+  animation: slideUp 0.8s ease-out;
+}
+
+.btn-btn-primary {
+  padding: 12px 24px;
+  height: 15px;
+  width: 50px;
+  background-color: transparent;
+  color: rgb(177, 204, 78);
+  border: none;
+  border-radius: 0.5px;
+  cursor: pointer;
+  outline: 1px solid rgb(148, 204, 78);
+  transition: outline-color 0.3s ease-in-out;
+  transform: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  box-shadow: none;
+  transition-duration: 500ms;
+  transition-property: all;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 0; /* или right: 0; в зависимости от ваших требований */
+}
+
+.card-body {
+  /* Регулирование непрозрачности фона по желанию */
+  border-radius: 5px 5px 5px 5px;
+  height: 375px;
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: auto;
+  text-align: auto;
+}
+.card {
+  box-shadow: 0 0 12px rgba(177, 204, 78, 0.5);
+  height: 375px;
+  width: 275px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(46, 46, 46);
+  align-items: center;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.product-wrap {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px 10px 10px 10px;
+  background: white;
+  padding: 0 0px 20px;
+  width: 23%;
+  text-align: center;
+  font-size: 14px;
+  font-family: Lora;
+  text-transform: uppercase;
+}
+.product-item {
+  position: relative;
+  overflow: hidden;
+}
+.product-wrap img {
+  display: block;
+  width: 100%;
+}
+.product-buttons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.button-shop {
+  text-decoration: none;
+  color: #c0a97a;
+  font-size: 12px;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #c0a97a;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s ease-in-out;
+}
+.button-shop:before {
+  content: "\f07a";
+  font-family: FontAwesome;
+  margin-right: 10px;
+}
+.product-item:hover .product-buttons {
+  opacity: 1;
+}
+.product-item:hover .button-shop {
+  transform: translate(-50%, -50%) scale(1);
+}
+.button-shop:hover {
+  background: black;
+}
+.product-title {
+  color: #5e5e5e;
+}
+.product-title a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  padding-bottom: 7px;
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  font-family: "Raleway", sans-serif;
+  font-weight: 650;
+}
+.product-title a:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #2e2e2e;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0;
+  transition: 0.3s ease-in-out;
+}
+.product-title a:hover {
+  color: #927b50;
+}
+.product-title:hover a:after {
+  background: rgb(148, 204, 78);
+}
+.price {
+  font-size: 24px;
+  color: #9b8862;
+  font-weight: 700;
+  font-family: "Raleway", serif;
+  font-weight: 650;
+}
+
+.urna {
+  background-color: rgba(147, 204, 78, 0);
+  position: absolute;
+  color: white;
+  width: 175px;
+  height: 80px;
+  margin-top: -10px;
+  margin-left: -200px;
+}
+
+/* ____________________________________________________________ */
+
+.nav-link {
+  font-size: 40px;
+  text-decoration: none;
+  color: #99d33d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  margin-left: 800px;
+  margin-top: 10px;
+}
+
+.nav-link-blyd {
+  font-size: 55px;
+  text-decoration: none;
+  color: #99d33d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  padding: 30px;
+}
+
+@media (max-width: 720px) {
+  .nav-link-blyd {
+    font-size: 23px;
+  }
+}
+
+.nav-link-blyd:active {
+  color: rgb(235, 202, 58);
+  -webkit-transition: all 555ms ease;
+}
+
+.nav-link:hover {
+  color: rgb(177, 204, 78);
+}
+
+.navbar-nav .nav-link.active {
+  color: darkgray;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.section-products {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 30px;
+}
+
+@media (max-width: 920px) {
+  .product-wrap {
+    width: 44%;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-wrap {
+    width: 90%;
+  }
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 100px;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+.urna {
+  margin-left: 1400px;
+  margin-top: 9.5px;
+}
+.smart-basket__min-icon {
+  width: 40px;
+  margin-bottom: 9px;
+}

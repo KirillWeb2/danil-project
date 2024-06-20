@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.background-image {
+    background-image: url("https://img.выкса.рф/uploads/posts/2019-04/1554883249_338a2168xh8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.39);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    /* Стиль для фона сайта */
+}
+
+
+.panel { /* Тёмная панель с рамкой */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 329px;
+    width: 635px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0); /* Регулирование непрозрачности фона по желанию */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 0 1px rgba(111, 134, 83, 0.753);
+}
+
+
+
+.panel1 { /* Тёмная панель без рамки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 348px;
+    width: 654px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.788); /* Adjust the opacity as desired */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.text-block1 { /* Стиль для "Лучшие пиломатериалы" */
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+.text-block2 { /* Стиль для "Foresty Woods" */
+    margin-bottom: 15px;
+    color: rgb(148, 204, 78);
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+.text-block3 { /* Стиль для "Пиломатериалы высокого качества от нашей профессиональной компании"  */
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+buttons { /* Стиль для "Заказать" */
+    padding: 12px 24px;
+    height: 50px;
+    width: 170px;
+    background-color: transparent;
+    color: rgb(177, 204, 78);
+    border: none;
+    border-radius: 0.5px;
+    cursor: pointer;
+    outline: 1px solid rgb(148, 204, 78);
+    transition: outline-color 0.3s ease-in-out; transform: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    box-shadow: none;
+    transition-duration: 500ms;
+    transition-property: all;
+}
+buttons:hover {
+    box-shadow: 0 0 12px rgba(177, 204, 78, 0.5);
+    transform: scale(1.03);
+}
+buttons:active {
+    outline-color: rgb(111, 134, 83);
+    transform: translateY(2px);
+}
+
+.d-grid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 920px) {
+    .panel {
+      width: 44%;
+    }
+  }
+
+@media (max-width: 640px) {
+    .panel {
+      width: 90%;
+    }
+  }
+
+@media (max-width: 920px) {
+    .panel1 {
+      width: 44%;
+    }
+  }
+
+@media (max-width: 640px) {
+    .panel1 {
+      width: 90%;
+    }
+  }
