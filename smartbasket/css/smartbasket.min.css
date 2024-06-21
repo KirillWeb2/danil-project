@@ -720,6 +720,7 @@
   align-items: center;
   font: 13px "Exo 2", sans-serif;
   color: #000;
+  margin: 0;
 }
 
 .smart-basket__label-agreement::before {
